@@ -1,12 +1,18 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Wrapper({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  console.log("pathname", pathname);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  if (pathname === "/signup" || pathname === "/login") {
+    return <>{children}</>;
+  }
   return (
     <>
       <div>
