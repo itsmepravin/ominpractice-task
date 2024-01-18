@@ -1,8 +1,12 @@
+import SinglePost from "./SinglePost";
+
 const Posts = () => {
   return (
-    <div>
-      <h2>Posts</h2>
-    </div>
+    <>
+      <SinglePost />
+      <SinglePost />
+      <SinglePost />
+    </>
   );
 };
 

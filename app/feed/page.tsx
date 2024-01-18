@@ -15,7 +15,7 @@ const SamplePage = () => {
         {/* Users */}
         {repeatArr.map((e) => {
           return (
-            <div className="flex gap-4 bg-white shadow-lg sm:rounded-lgm p-6 rounded rounded-lg mb-4">
+            <div className="flex gap-4 bg-white shadow-lg sm:rounded-lgm p-6 rounded-lg mb-4">
               <div className="w-full flex justify-center sm:justify-start sm:w-auto">
                 <img
                   className="object-cover w-20 h-20 rounded-full"
