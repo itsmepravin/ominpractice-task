@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 export default function Wrapper({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  console.log("pathname", pathname);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

@@ -1,6 +1,15 @@
-const SingleFollower = () => {
+type TSingleFollower = {
+  applyBorder: boolean;
+  following: boolean;
+};
+
+const SingleFollower = ({ applyBorder, following }: TSingleFollower) => {
   return (
-    <div className="flex flex-row justify-between w-full">
+    <div
+      className={`flex flex-row justify-between w-[500px] pb-12 ${
+        applyBorder ? "border-b-2 border-gray-300" : null
+      }`}
+    >
       <div className="flex gap-4 items-center">
         <img
           className="object-cover w-16 h-16 rounded-full"
@@ -13,10 +22,12 @@ const SingleFollower = () => {
       </div>
       <div>
         <button
-          className="ml-auto bg-red-400 text-white px-7 py-2 rounded font-medium shadow-lg hover:text-gray-700"
+          className={`ml-auto px-7 py-2 rounded font-medium shadow-lg hover:text-gray-700 ${
+            following ? "bg-white text-gray-500" : "bg-red-400 text-white"
+          }`}
           type="submit"
         >
-          Follow
+          {following ? "Following" : "Follow"}
         </button>
       </div>
     </div>
